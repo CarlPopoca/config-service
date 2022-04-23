@@ -1,10 +1,14 @@
 server:  
   port: ${PORT:2222}
 
-# Spring properties
-spring:  
+spring:
   application:
     name: contacts-client
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest  
 
 eureka:  
   client:
@@ -17,10 +21,3 @@ microservicio:
     findAllUrl: http://${microservicio.contact.name}/contacts/findall/
     saveUrl: http://${microservicio.contact.name}/contacts/save/
     deleteUrl: http://${microservicio.contact.name}/contacts/delete/
-
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest  
