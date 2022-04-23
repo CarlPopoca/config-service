@@ -1,6 +1,11 @@
 server:  
   port: ${PORT:2222}
 
+# Spring properties
+spring:  
+  application:
+    name: contacts-client
+
 eureka:  
   client:
     serviceUrl:
